@@ -1,0 +1,36 @@
+---
+const {link, text, icon, color} = Astro.props;
+import { Icon } from "astro-icon/components"
+---
+
+<a href={link} style={`--link-color: ${color}`}>
+  <Icon name={icon}/>
+  <span>{text}</span>
+</a>
+
+<style>
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5%;
+    color: var(--link-color);
+    text-decoration: none;
+    width: auto;
+    position:relative;
+    height: 40px;
+    gap: 8px;
+  }
+  a::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--link-color);
+    transition: width 0.3s ease;
+  }
+  a:hover::after {
+    width: 100%;
+  }
+</style>

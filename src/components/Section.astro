@@ -1,0 +1,29 @@
+---
+import Spacer from "./Spacer.astro";
+const {color, id} = Astro.props;
+---
+
+<div id={id} style={`--color: ${color}`} class="section-holder">
+    <Spacer height="70"/>
+    <div id="section">
+        <slot/>
+    </div>
+</div>
+<style>
+    :root {
+        --color: #FFF
+    }
+    #section {
+        color: white;
+        margin: 10px auto;
+        padding: 1%;
+        border: 2px solid rgba(var(--color), 0.3);
+        width: 90%;
+        border-radius: 10px;
+        transition: border 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.05)
+    }
+    #section:hover {
+        border: 2px solid rgba(var(--color), 0.7);
+    }
+</style>

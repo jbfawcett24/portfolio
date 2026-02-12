@@ -1,0 +1,26 @@
+---
+import Section from "./Section.astro";
+const { img, name, description, link, dir } = Astro.props
+import {Image} from "astro:assets";
+---
+
+<Section id="name" color="254, 238, 162">
+    <div class=`${dir} project`>
+        <Image src={img} alt={name} width="300" height="300"/>
+        <div>
+            <h2>{name}</h2>
+            <p>{description}</p>
+            <a href={link} target="_blank">See More</a>
+        </div>
+    </div>
+</Section>
+
+<style>
+    .project {
+        display: flex;
+        gap: 20px;
+    }
+    .right {
+        flex-direction: row-reverse;
+    }
+</style>

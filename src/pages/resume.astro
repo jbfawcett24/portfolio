@@ -1,0 +1,27 @@
+---
+
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import MobileHeader from "../components/MobileHeader.astro";
+import Spacer from "../components/Spacer.astro";---
+
+<Layout>
+    <Header/>
+    <MobileHeader/>
+    <Spacer height="70"/>
+    <p>Hello World</p>
+</Layout>
+
+<style>
+    .mobile-only {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .mobile-only {
+            display: block;
+        }
+        .desktop-only {
+            display: none;
+        }
+    }
+</style>

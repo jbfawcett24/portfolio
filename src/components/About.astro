@@ -1,0 +1,40 @@
+---
+
+import Spacer from "./Spacer.astro";
+import Section from "./Section.astro";---
+
+<Section color="134, 186, 226" id="about">
+    <div id="about-content">
+    <h1>About Me</h1>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur sapien odio, finibus egestas dolor fringilla vel.
+        <span>Suspendisse</span>
+        rutrum in nulla et malesuada. In <span>pretium</span> libero vel dapibus ultricies. Pellentesque consectetur felis id tellus fringilla, nec placerat mi aliquam. Curabitur lobortis, lectus nec blandit aliquet, enim est ullamcorper augue, eget suscipit orci erat vitae leo.</p>
+    </div>
+</Section>
+
+
+<style>
+    #about-content {
+        text-align: center;
+
+    }
+    span {
+        color: #86BAE2;
+        font-weight: bold;
+    }
+    h1 {
+       color: #86BAE2
+    }
+     p {
+         width: 90%;
+     }
+    @media (max-width: 768px) {
+        #about-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+</style>

@@ -3,12 +3,15 @@ const {link, text, icon, color} = Astro.props;
 import { Icon } from "astro-icon/components"
 ---
 
-<a href={link} style={`--link-color: ${color}`}>
+<a href={link} style={`--link-color: ${color}`} aria-label="header-link">
   <Icon name={icon}/>
   <span>{text}</span>
 </a>
 
 <style>
+  :root {
+    --link-color: #FFF;
+  }
   a {
     display: flex;
     align-items: center;

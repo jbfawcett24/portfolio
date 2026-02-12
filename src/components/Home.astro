@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import Spacer from "./Spacer.astro";
+import Section from "./Section.astro";
+---
+
+<Section id="home" color="212, 182, 243">
+    <div id="about-grid">
+        <div id="opener">
+            <p>Hello, my name is...</p>
+            <h1 id="name">James Fawcett</h1>
+        </div>
+        <div id="paragraph">
+            <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur sapien odio, finibus egestas dolor fringilla vel. Suspendisse rutrum in nulla et malesuada. In pretium libero vel dapibus ultricies. Pellentesque consectetur felis id tellus fringilla, nec placerat mi aliquam. Curabitur lobortis, lectus nec blandit aliquet, enim est ullamcorper augue, eget suscipit orci erat vitae leo. </p>
+            <a id="contact" href="/#contact">Get in Touch</a>
+        </div>
+        <Image src="https://placehold.co/400x400" alt="Main" width="400" height="400" loading="eager"/>
+    </div>
+</Section>
+
+
+<style>
+    #about-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        column-gap: 20px;
+    }
+    img {
+        width: 100%;
+        grid-column: 2/3;
+        grid-row: 1/3;
+    }
+    #paragraph {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #name {
+        color: #D4B6F3;
+    }
+    #contact {
+        background-color: #D4B6F3;
+        padding: 1% 1.5%;
+        margin: 1% 0 ;
+        border-radius: 10px;
+        text-decoration: none;
+        color: rgba(19, 17, 38);
+        transition: all 0.2s ease;
+    }
+    #contact:hover {
+        background-color: rgb(51, 46, 87);
+        color: white;
+    }
+    @media (max-width: 768px) {
+        #about-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            column-gap: 0;
+            height: auto;
+            padding: 2%;
+            padding-bottom: 5%;
+            justify-content: center;
+            align-items: center;
+        }
+        #opener {
+            height: fit-content;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                font-size: 0.7rem;
+            }
+            h1 {
+                font-size: 2rem;
+                margin: 0;
+                text-align: left;
+            }
+        }
+        #paragraph {
+            grid-column: 1/3;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+            p {
+                text-align: center;
+            }
+        }
+        img {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            width: 130px;
+            height: 130px;
+            margin: auto;
+        }
+        #contact {
+            padding: 2%;
+            padding-left: 4%;
+            padding-right: 4%;
+            margin: auto;
+        }
+    }
+</style>

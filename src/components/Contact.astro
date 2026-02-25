@@ -1,0 +1,25 @@
+---
+
+import Section from "./Section.astro";
+import ContactForm from "./ContactForm.astro";
+import Socials from "./Socials.astro";---
+
+<Section id="contact" color="232, 149, 149">
+    <div>
+        <Socials/>
+        <ContactForm/>
+    </div>
+</Section>
+
+<style>
+    div {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    h1 {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+</style>

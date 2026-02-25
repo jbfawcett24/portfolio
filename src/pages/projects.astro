@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MobileHeader from "../components/MobileHeader.astro";
+import Header from '../components/Header.astro';
+---
+
+<Layout>
+    <div class="desktop-only">
+        <Header/>
+    </div>
+    <div class="mobile-only">
+        <MobileHeader/>
+    </div>
+</Layout>
+
+<style>
+    .mobile-only {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .mobile-only {
+            display: block;
+        }
+        .desktop-only {
+            display: none;
+        }
+    }
+</style>

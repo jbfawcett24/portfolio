@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components"
+import github from "../assets/GitHub_Lockup_White_Clearspace.svg"
+import { Image } from "astro:assets"
+import linkedIn from "../assets/LI-Logo.png"
+---
+
+<section>
+    <h1>Contact Me</h1>
+    <a href="https://github.com/jbfawcett24/" target="_blank">
+        <Image src={github} alt="Github Logo"/>
+    </a>
+    <a href="www.linkedin.com/in/jbfawcett" target="_blank">
+        <Image src={linkedIn} alt="LinkedIn Logo"/>
+    </a>
+    <a href="/resume">
+        <Icon name="heroicons-solid:document-text"/>
+        <h3>Resume</h3>
+    </a>
+</section>
+
+<style>
+    h1 {
+        color: rgba(232, 149, 149, 1);
+        margin: 0;
+    }
+    section {
+        margin-left: 5%;
+    }
+    a {
+        display: flex;
+        align-items: flex-start;
+        text-decoration: none;
+        color: white;
+        transition: color 0.3s ease;
+        margin-top: 3%;
+    }
+    a:hover {
+        color: rgba(232, 149, 149, 1)
+    }
+    h3 {
+        margin: auto 0;
+        font-size: 24px;
+    }
+    svg {
+        margin: auto 0;
+        aspect-ratio: 1/1;
+        height: 30px;
+        width: 30px;
+    }
+    img {
+        height: 30px;
+        width: fit-content;
+    }
+</style>

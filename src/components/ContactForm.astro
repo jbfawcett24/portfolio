@@ -111,6 +111,71 @@
         font-size: 0.7rem;
     }
 
+    @media (max-width: 768px) {
+        form {
+            /* Reset grid to a simple single-column flow */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 1.5rem;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        /* Group headings and containers to 90% and center them */
+        h3, #left, #messageDiv, #error {
+            width: 90%;
+            margin: 0 auto;
+            grid-column: auto !important; /* Break the grid rules */
+        }
+
+        /* Fix the internal name/email divs */
+        #left {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #left div {
+            flex-direction: column;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        #left div label {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        /* Critical: Force inputs and textarea to stay inside their parents */
+        input, textarea {
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box; /* Includes padding in the width calculation */
+        }
+
+        #messageDiv {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #messageDiv label {
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        /* The Button Fix */
+        button {
+            width: 90% !important; /* Matches the width of other containers */
+            margin: 10px auto !important;
+            grid-column: auto !important;
+            grid-row: auto !important;
+            box-sizing: border-box;
+            /* Remove fixed heights if any, let padding do the work */
+            min-height: 45px;
+        }
+    }
 </style>
 
 <script>

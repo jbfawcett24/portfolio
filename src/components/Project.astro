@@ -52,4 +52,22 @@ import {Image} from "astro:assets";
         border: 2px solid rgba(254, 238, 162, 0.7);
         color: white;
     }
+    @media (max-width: 768px) {
+        .project {
+            flex-direction: column;
+        }
+        a {
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .right {
+            text-align: left;
+        }
+        div {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 1%;
+        }
+    }
 </style>

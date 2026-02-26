@@ -1,10 +1,6 @@
 ---
-
 import Spacer from "./Spacer.astro";
-import Section from "./Section.astro";
 import Skill from "./Skill.astro";
-import jsImg from "../assets/javascript.png"
-import cssImg from "../assets/css.png"
 ---
 
 <div id="skills">
@@ -14,18 +10,51 @@ import cssImg from "../assets/css.png"
         <div class="skill">
             <h2>Languages</h2>
             <div class="skill-flex">
-                <Skill name="JavaScript" img={jsImg}/>
-                <Skill name="CSS" img={cssImg}/>
+                <Skill name="TypeScript" img="devicon:typescript"/>
+                <Skill name="JavaScript" img="devicon:javascript"/>
+                <Skill name="Rust" img="devicon:rust"/>
+                <Skill name="C#" img="devicon:csharp"/>
+                <Skill name="Python" img="devicon:python"/>
+                <Skill name="HTML" img="devicon:html5"/>
+                <Skill name="CSS" img="devicon:css3"/>
+                <Skill name="mySQL" img="devicon:mysql"/>
             </div>
         </div>
         <div class="skill">
-            <h2>Frameworks</h2>
+            <h2>Frameworks/Libraries</h2>
+            <div class="skill-flex">
+                <Skill name="React" img="devicon:react"/>
+                <Skill name="Next.js" img="devicon:nextjs"/>
+                <Skill name="Astro" img="devicon:astro"/>
+                <Skill name="Pygame" img="devicon:python"/>
+                <Skill name="TensorFlow" img="devicon:tensorflow"/>
+            </div>
         </div>
         <div class="skill">
             <h2>Tools</h2>
+            <div class="skill-flex">
+                <Skill name="Git" img="devicon:git"/>
+                <Skill name="Docker" img="devicon:docker"/>
+                <Skill name="Google Cloud" img="devicon:googlecloud"/>
+                <Skill name="DigitalOcean" img="devicon:digitalocean"/>
+                <Skill name="Unity" img="devicon:unity"/>
+                <Skill name="Linux" img="devicon:linux"/>
+            </div>
         </div>
+        <!-- other skills
+        REST API
+        Authentication
+        Responsive UI
+        Data Structures & Algorithms
+        -->
         <div class="skill">
             <h2>Other</h2>
+            <div class="skill-flex">
+                <Skill name="REST API" img="devicon:fastapi"/>
+                <Skill name="Authentication" img="heroicons:finger-print"/>
+                <Skill name="Responsive Design" img="heroicons-solid:device-phone-mobile"/>
+                <Skill name="Data Structures and Algorithms" img="devicon:thealgorithms"/>
+            </div>
         </div>
     </div>
 </div>
@@ -61,6 +90,8 @@ import cssImg from "../assets/css.png"
         display: flex;
         gap: 10px;
         justify-content: center;
+        flex-wrap: wrap;
+
     }
     #skills-holder {
         display: grid;

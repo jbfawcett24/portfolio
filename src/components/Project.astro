@@ -6,7 +6,7 @@ import {Image} from "astro:assets";
 
 <Section id="name" color="254, 238, 162">
     <div class=`${dir} project`>
-        <Image src={img} alt={name} width="300" height="300"/>
+        <Image src={img} alt={name} width="3000" height="3000"/>
         <div>
             <h2>{name}</h2>
             <p>{description}</p>
@@ -25,9 +25,21 @@ import {Image} from "astro:assets";
         flex-direction: row-reverse;
         text-align: right;
     }
+    .right a {
+        margin-left: auto;
+    }
+    img {
+        margin:auto;
+        object-fit: cover;
+        object-position: left;
+        width: 300px;
+        height: 300px;
+    }
     a {
         background-color: rgb(254, 238, 162);
-        padding: 1%;
+        padding: 5px;
+        width: fit-content;
+        display: block;
         text-decoration: none;
         border-radius: 10px;
         color: black;

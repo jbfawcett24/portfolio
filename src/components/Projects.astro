@@ -2,17 +2,21 @@
 import Spacer from "./Spacer.astro";
 import Project from "./Project.astro";
 import DashLine from "./DashLine.astro";
+import swgohImg from "../assets/swgoh-utils.png"
+import mtgImg from "../assets/mtg-board.png"
 ---
 
 <div id="projects">
     <Spacer height="70"/>
     <h1>Projects</h1>
     <div id="project-list">
-        <Project name="MTG Board" img="https:placehold.co/20x20" description="I do cool things" link="https://www.github.com" dir="right"/>
+        <Project name="MTG Board" img={mtgImg}  link="https://github.com/jbfawcett24/mtg-board" dir="right"
+            description="I developed a cross-platform digital board for Magic: The Gathering to solve a common player pain point: the high cost and logistical difficulty of playtesting new deck builds in person. Built with React, Node.js, and Electron, the application creates a seamless link between a user's smartphone and laptop to facilitate digital play in a physical space. To streamline the user experience, I reverse-engineered APIs from two major deck-building platforms, allowing users to instantly import and sync their digital card lists via URL. This project successfully removed the financial barrier to deck experimentation, enabling free, immediate playtesting against real opponents."
+        />
         <DashLine color="254, 238, 162" dir="left"/>
-        <Project name="Canvas Assignment Timer" img="https://placehold.co/20x20" description="task timer" link="https://www.github.com" dir="left"/
+        <Project name="SWGOH Utils" img={swgohImg} description="I engineered a high-performance web application to manage complex resource allocation and progression planning for Star Wars: Galaxy of Heroes. The project features a React/Next.js frontend supported by a robust Rust-based backend utilizing SQLite. A key highlight of this build was the development of a bespoke user authentication and session management system from the ground up in Rust. By bypassing off-the-shelf auth providers, I gained deep experience in secure credential hashing, token-based validation, and relational database schema design, resulting in a tailored, low-latency planning tool." link="https://github.com/jbfawcett24/swgoh-utils" dir="left"/>
     </div>
-    <a href="/projects">View All</a>
+    <!--<a href="/projects">View All</a>-->
 </div>
 
 <style>
